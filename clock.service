@@ -1,0 +1,14 @@
+[Unit]
+Description=Raspberry Pi TFT Clock
+After=multi-user.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/path/to/clock
+ExecStart=/usr/bin/python3 /path/to/clock/clock.py
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
