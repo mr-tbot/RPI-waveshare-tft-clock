@@ -38,7 +38,9 @@ A simple set of scripts to install and launch a full screen clock ...  great for
 
 3. **Configure the Waveshare display:**
    
-   Edit `/boot/config.txt` and add the appropriate overlay for your display:
+   Edit the Raspberry Pi configuration file and add the appropriate overlay for your display:
+   - For newer OS (Bookworm and later): Edit `/boot/firmware/config.txt`
+   - For older OS (Bullseye and earlier): Edit `/boot/config.txt`
    
    For Waveshare 3.5" LCD (B):
    ```
@@ -118,7 +120,9 @@ You can customize the clock by editing `clock.py`:
 ## Troubleshooting
 
 **Clock doesn't display on TFT:**
-- Ensure the correct display overlay is enabled in `/boot/config.txt`
+- Ensure the correct display overlay is enabled in the config file:
+  - Newer OS (Bookworm+): `/boot/firmware/config.txt`
+  - Older OS (Bullseye and earlier): `/boot/config.txt`
 - Check that the framebuffer device exists: `ls /dev/fb*`
 - Try manually specifying the framebuffer: `SDL_FBDEV=/dev/fb0 python3 clock.py`
 
