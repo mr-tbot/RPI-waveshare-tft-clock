@@ -83,7 +83,7 @@ All configuration lives at the top of `install.sh`. Edit those values and re-run
 ```bash
 # -- Top label (displayed above the clock) ------------------------------------
 SHOW_LABEL="true"          # true | false
-LABEL_TEXT="BOTSERVER-HK"
+LABEL_TEXT="BOT-CLOCK v1.0"
 
 # -- Time format ---------------------------------------------------------------
 CLOCK_24HR="false"         # true = 24-hour  |  false = 12-hour with AM/PM
