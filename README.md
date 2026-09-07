@@ -191,9 +191,19 @@ Goal: stability and predictability.
 
 ---
 
-## License
+## License & acknowledgements
 
-MIT
+This project is released under the [MIT License](LICENSE) — Copyright (c) 2026 mr-tbot.
+
+**Nothing third-party is bundled here.** The repo is four original files: `install.sh`, `bin/clock_gtk.py`, `service-launchers/idle_clock_launcher.sh` and this README. Everything the clock needs at runtime — Python 3.11 (PSF-2.0), PyGObject and GTK 3 (LGPL-2.1-or-later), `xdotool` (BSD-3-Clause) and `xprintidle` (GPL-2.0-or-later) — is installed from your own Debian / Raspberry Pi OS apt mirror by `install.sh` and stays under its own license. `clock_gtk.py` only calls the public GTK 3 API through GObject-Introspection at runtime, and the launcher only invokes `xprintidle` and `xdotool` as subprocesses; no LGPL or GPL source is copied, statically linked, or redistributed by this repository, so no copyleft obligation attaches to the code here.
+
+Full third-party attribution is in [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md).
+
+"Waveshare" is a trademark of Waveshare Electronics; "Raspberry Pi" is a trademark of Raspberry Pi Ltd; "GNOME" and "Debian" are trademarks of the GNOME Foundation and Software in the Public Interest, Inc. respectively. This project is an independent third-party utility, named for compatibility only, and is not endorsed by, sponsored by, or affiliated with any of them. No Waveshare driver, firmware or kernel module is downloaded, installed or redistributed by anything in this repo.
+
+## Author
+
+Built by TBOT — https://mr-tbot.com
 
 ## Author
 
